@@ -5,40 +5,57 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
-
-a {
-    font-size: 28px;
-    line-height: 41px;
+.menu ul li {
+    display: inline;
+    position: relative;
+}
+.menu ul li a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 25px;
     color: #5D5D7D;
     margin-right: 41px;
+    cursor: pointer;
 }
 
-a:nth-child(2) {
-    opacity: 0.4;
+.menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+.menu ul li:hover ul {
+    display: block;
+}
 
+.menu ul ul {
+    width: 200px
+}
+
+.menu ul ul li a {
+    display: block;
 }
 
 a:hover {
     opacity: 0.4;
 }
 
-header {
+nav {
     margin-top: 24px;
     margin-left: 57px;
+
 }
 
-
 h1 {
-    font-size: 70px;
+    font-size: 60px;
     line-height: 80px;
     color: #5D5D7D;
     width: 368px;
-
 }
 
 p {
     width: 540px;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 48px;
     color: #5D5D7D;
     opacity: 0.6;
@@ -46,15 +63,13 @@ p {
 }
 
 button {
-    width: 135px;
-    height: 12px;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
     color: #FFFFFF;
-    width: 269px;
-    height: 62px;
-    background: #9499EA;
+    width: 250px;
+    height: 50px;
+    background: #1C7FA6;
     box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);
     border: none;
     border-radius: 30px;
@@ -69,12 +84,14 @@ button:active {
     opacity: .5;
 }
 
-img {
-    width: 456px;
-    height: 561.95px;
+.web {
+    width: 500px;
     position: relative;
-    top: 20%;
-    right: 135px;
+    margin: 70px 80px auto auto;
+    display: block;
+}
+.mobile {
+    display: none;
 }
 
 .wrapper {
@@ -86,13 +103,13 @@ img {
 .container-left {
     display: inline-block;
     width: 60%;
-    margin-top: 20%;
-    padding-left: 136px;
+    margin-top: 10%;
+    padding-left: 100px;
 }
 
 .container-right {
     display: inline-block;
-    background-color: rgba(93, 93, 125, 0.16);
+    background-color: rgba(95, 205, 217, 0.16);
     height: 100vh;
     width: 40%;
     position: absolute;
@@ -114,11 +131,15 @@ img {
         padding: 40px;
     }
 
-    img {
+    .mobile {
+        display: block;
         position: static;
         width: 90%;
     }
-    header {
+    .web {
+        display: none;
+    }
+    nav {
         display: none;
     }
     h1 {
